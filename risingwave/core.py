@@ -615,7 +615,7 @@ class RisingWave(RisingWaveConnection):
         return RisingWaveConnection(self._connect(), self.rw_version)
 
     def close(self):
-        self.conn_manager.close()
+        self.conn.close()
         if self.local_risingwave is not None:
             self.local_risingwave.kill()
 
